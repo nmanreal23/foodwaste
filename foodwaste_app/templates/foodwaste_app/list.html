@@ -1,0 +1,76 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'adminuser_logout' %}">Admin Logout</a></li>
+                    {% else %}
+                    <li class="#"><a href="{% url 'adminuser_login' %}">Admin Login</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'add_employee_submit' %}">Registration</a></li>
+                    <li><a href="{% url 'empinfo' %}">Employee info</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="current"><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <p>Learn about the problems of food waste and effective ways to mitigate it.</p>
+                <h2>Featured Topics:</h2>
+                
+                    {% for item in topics_list %}
+                        {% if forloop.counter0 == 0 %}
+                        <p style="color:#4472C4;font-style: italic; font-weight: bold;">{{ item }}</p>
+                        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: small;">
+                            Description: This covers practical tips and Strategies designed for individuals and families to reduce food waste at home.
+                            Making your food go far as much as possible can be a challenge especially when you don't have much space in your fridges. 
+                            Ways you could reduce wasting food at home includes meal planning, minimise serving size, creative use of leftovers and 
+                            techniques in storing your meals.</p>
+                            <p><a style="font-size: small;" href="{% url 'details1' %}">Learn more</a></p>
+                   
+                        {% elif forloop.counter0 == 1 %}
+                        <p style="color:#4472C4;font-style: italic;font-weight: bold;">{{ item }}</p>
+                        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: small;">
+                            Description: This will discuss about the impact of food consumption patterns on food waste and the environment. Being aware
+                            of the impact of food consumption choices involves various aspect on the environment, society and economy that encourages
+                            individual to make decisions which promote sustainability and reduce food waste.</p>
+                            <p><a style="font-size: small;" href="{% url 'details2' %}">Learn more</a></p>
+                        
+                        {% elif forloop.counter0 == 2 %}
+                        <p style="color:#4472C4; font-style: italic;font-weight: bold;">{{ item }}</p>
+                        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: small;">
+                            Description: As an important procedure in food waste management, the goal of food waste segregation is to facilitate
+                            effective waste management practices which will minimise the impact of food waste on the environment and maximise potential
+                            beneficial use.</p>
+                            <p><a style="font-size: small;" href="{% url 'details3' %}">Learn more</a></p>
+                        
+                        {% elif forloop.counter0 == 3 %}
+                        <p style="color:#4472C4;font-style: italic;font-weight: bold;">{{ item }}</p>
+                        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: small;">
+                            Description: With the food wastage sheet, companies will be able to record data, keep track and analyse patterns
+                            on the food waste generated, able to determine the areas of improvement, benchmark performance and measure progress towards
+                            food waste.</p>
+                            <p><a style="font-size: small;" href="{% url 'details4' %}">Learn more</a></p>
+
+                        {% endif %}
+                    
+                    {% endfor %}
+                </div>
+        </section>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+        {% endblock %}
+
+    

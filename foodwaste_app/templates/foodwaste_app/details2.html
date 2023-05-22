@@ -1,0 +1,42 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li class="current"><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Sustainable Food Consumption: Making Informed Choices</h2>
+                <p>Food is one of the primary necessities of every human being. People choose different food according to occasion, preferences, 
+                <br>and diet; religion is also a factor for some. According to Pakravan-Charvadeh, M. R., et al., 2022, sustainable food consumption 
+                <br>improves nutrition and food security by only consuming enough food, thus reducing food waste. He also addressed that regional food 
+                <br>consumption utilization is one way to reduce food waste.</p>
+                <p>Another practical, sustainable food consumption pattern approach is education and awareness through the course or mass media 
+                <br>communication. In Iran, TV programs, radio, and social networks are suitable ways to improve the nutrition culture and 
+                <br>reduce food waste, Pakravan-Charvadeh, M. R. et al., 2022.</p>
+                <p>It is also worth noting that enough information and warning about too much eating and incorrect food choices will cause diabetes, 
+                <br>heart disease, and obesity. These are likewise the most effective ways to change the current food consumption leading to 
+                <br>sustainable Food Consumption and reducing food waste.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}
+        
+
+    

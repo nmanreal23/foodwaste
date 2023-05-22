@@ -1,0 +1,64 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'adminuser_logout' %}">Admin Logout</a></li>
+                    {% else %}
+                    <li class="#"><a href="{% url 'adminuser_login' %}">Admin Login</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'add_employee_submit' %}">Registration</a></li>
+                    <li><a href="{% url 'empinfo' %}">Employee info</a></li>
+                    <!-- <li><a href="{% url 'update' 1 %}">Update Employee</a></li> -->
+                    <li class="current"><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+        <section id="showcase">
+            <div class="container">
+                
+                <h1> Food Waste Education</h1>
+                    <p>
+                    <ul>
+                        <li><h2>Group 5 Members</h2></li>
+                        <li>George Librando  - S345658</li>
+                        <li>Nicasio Manreal  - S161795</li>
+                        <li>Jack Sweet  - S322524</li>
+                        <li>Yukesh Chamlagain  - S360896</li>
+                    </ul>
+                    </p>
+            </div>
+        </section>
+
+
+        <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Introduction</h2>
+                    <p>Reducing food waste is a crucial challenge to the present global food system. 
+                        Building awareness about problems arising from food waste and educating the 
+                        public on effective mitigation is the first step towards food wastage.</p>
+                    <p>Further, conducting a waste audit helps determine how to implement changes to 
+                        minimise food waste. User-friendly food waste audit applications are essential 
+                        because they can help accurately measure food-related waste, identify waste sources, 
+                        and evaluate waste reduction strategies' effectiveness</p>
+            </div>
+        </div>
+        </section>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}
+        
+    

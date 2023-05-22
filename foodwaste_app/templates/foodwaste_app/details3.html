@@ -1,0 +1,73 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li class="current"><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Food Waste Segregation</h2>
+                <p align='justify'>As an important procedure in food waste management, the goal of food waste segregation is to 
+                    facilitate effective waste management practices which will minimise the impact of food waste 
+                    on the environment and maximise potential beneficial use. According to the European Compost 
+                    Network 2013, there were various systems implemented in countries such as Austria, Germany, 
+                    Sweden, Spain and the Netherlands in the last 10 years that collects food waste for biological 
+                    treatment. The highly efficient system requires the participation of households for the source-segregation 
+                    for it to be increasingly efficient. There are scientific publications that discussed the influence 
+                    different factors on household participation rate in waste recycling schemes. Berglund, 2005, Dietz et al.,
+                     1998, Sterner and Bartelings, 1999, Vicente and Reis, 2008 sited that the focus is on the demographic factors 
+                     such as age, gender, socio-economic background and dwelling types. In order to increase recycling there needs 
+                     to be an economic incentives a strategy suggested by (Bisaillon et al., 2009).</P>
+                    <p align="justify">Research was carried out in a residential area of Malmö, Sweden. Food waste was to be source-segregated 
+                    in paper bags by households. The paper bags were then to be disposed of in separate bins recycling buildings, 
+                    which were evenly distributed throughout the residential area and were designated for household waste disposal.
+                    Households were linked to a single recycling facility via an electric key. In all cases, the distance between 
+                    the house and the recycling facility was no more than 100 metres. Paper bags labelled for food waste separation 
+                    were distributed by the municipality for each building for free. The entire neighbourhood is made up of rental 
+                    apartments. Households are highly diverse in terms of age and gender. 49% of the population in the area was not 
+                    born in Sweden, and 14% have at least one parent who is not Swedish. Buildings in the area were built in the late 
+                    1940s and mostly consist of 2 and 3 room apartments. 28% of the population aged 20-68 years has a higher education, 
+                    and the socioeconomic status of households is often lower than the city average, with 15% relying on social 
+                    benefits (City of Malmö, 2008).</P>
+                    <p align="justify">As a result, the two campaigns (A and B) were carried out in the same case study area and among the same households. 
+                    In both cases, every household was visited. The total response rate of nearly 80% was obtained. Approximately 100 
+                    households had their inhabitants change during the study period. The study used two evaluation methods – recording 
+                    weights of separately collected food waste and conducting waste composition analysis. Weights were recorded at the 
+                    treatment plant with accuracy on multiple occasions before and after the campaigns. Samples coming from 320 households 
+                    were analysed for waste composition, with 20 per cent of food waste and residual waste bins randomly selected. A sum of 4.3 
+                    tons of waste was analysed separately in five analyses. The samples collected on the day of regular waste collection, 
+                    without segregation or moisture correction.</P>
+                    </p>There are four indicators used on the evaluation of the campaigns:
+                    <br>1.	Separately collected food waste (per kg per household weekly) – determined based on the weight.
+                    <br>2.	Source-separation ratio in mass percentage – the mass collected source-separated recyclable material 
+                    in relation to the sum of the same material in disposed waste.
+                    <br>3.	Ratio of impurities in mass percentage – it is the mass of the mis-sorted materials in relation to all disposed waste in the specific division.
+                    <br>4.	Specific food waste generation (per kg per household weekly) – the results were based on waste composition analyses,
+                    adding amount of food waste in residual waste to the amount of food waste separated by households not including weight of
+                    mis-sorting.
+                    <p>The below graph shows the results from the separately collected food waste (weeks before and after) campaign A. An increase of 12 per cent can be seen in the weekly collection of food waste when separately collected food waste when comparing the 10 weeks period where the result was not significant statistically due to it being higher than 10 per cent for the 10 to 20 weeks.
+                    </p>
+
+
+            </div>
+        </section>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}
+        
+
+    

@@ -1,0 +1,49 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">|</h1>
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li class="current"><a href="{% url 'adminuser_logout' %}">Admin Logout</a></li>
+                    {% else %}
+                    <li class="current"><a href="{% url 'adminuser_login' %}">Admin Login</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'add_employee_submit' %}">Registration</a></li>
+                    <li><a href="{% url 'empinfo' %}">Employee info</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+        <section id="showcase">
+            <div class="container">
+                
+                <h1>Login</h1>
+                    <table>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <tr><td align="right">Username:</td>
+                                <td><input type="text" name="username" id="id_username"></td></tr>
+                            <tr><td align="right">Password:</td>
+                                <td><input type="password" name="password" id="id_password"></td></tr>
+                            <tr><td colspan="2" align="center"><input type="submit" value="LOGIN"></td></tr>
+                            <tr><td><br></td></tr>
+                        </form>
+                    </table>
+            </div>
+        </section>
+       
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}

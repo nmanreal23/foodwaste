@@ -1,0 +1,45 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li class="current"><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <div class="box">           
+                <h2>Reducing Food Waste at Home: Tips and Strategies</h2>
+                    <p>Almost half of the total global food waste is household food waste, and there is a growing research effort to resolve the 
+                        increasing issue of food waste to address this big environmental challenge, Heidenstrøm, N., et. Al., 2021. 
+                    <p>Below are some tips and strategies to reduce food waste at home.</p>
+                    <p></p>
+                    <br><b>Read the labels' food storage requirement if there is any.</b> Understanding the food storage requirement plays a big part in how to preserve 
+                            food. Aside from the nutritional diet, the food label displays the temperature requirement and proper storage to maximize its best-before date.
+                    <p></p>
+                    <br><b>Organize food according to size and have everything visible.</b> It applies to storage cabinets and fridges. If the taller items 
+                            cover the smaller foods, they are missed and spoil or expire.
+                    <p></p>
+                    <br><b>Reduce fridge temperature to 4 degrees Celsius.</b> According to Brown, T., et. Al, pg. 8, (2014), "reducing temperatures, for example, to 4 degrees Celsius 
+                            could significantly extend storage lives, giving greater opportunity for use before disposal". Although results vary depending on food storage and appliance type, 
+                            their experiment has suggested that reducing the fridge temperature by approximately at least 4 degrees Celsius will significantly extend the life of the food 
+                            inside the fridge.
+            </div>
+        </section>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}
+        
+
+    

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width. initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Food Waste">
+        <meta name="keywords" content="Food waste, Food, waste">
+        <meta name="author" content="HIT 237 Group 5">
+        <title>Food Waste Education | Welcome</title>
+        <link href="{% static 'foodwaste_app/css/style.css' %}" rel="stylesheet">
+    </head>
+ 
+    <body>
+        
+        {% block content %}
+            {% if messages %}
+                {% for warning in messages %}
+                    {{ warning }}
+                {% endfor %}
+            {% endif %}
+        {% endblock %}
+
+    </body>
+    </html>

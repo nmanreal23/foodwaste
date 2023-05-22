@@ -1,0 +1,73 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Employee Details</h1>
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'adminuser_logout' %}">Admin Logout</a></li>
+                    {% else %}
+                    <li class="#"><a href="{% url 'adminuser_login' %}">Admin Login</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'add_employee_submit' %}">Registration</a></li>
+                    <li class="current"><a href="{% url 'empinfo' %}">Employee info</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <!-- <input type="submit" name="submit" value="Update Employee Information" id=""> -->
+            <div class="box">
+                <h2>Employee Data</h2>
+
+                        {% if not emp_list or emp_list|length < 1 %}
+                        <p>There are no Widgets in the database.</p>
+                        {% else %}
+                        <table>
+                        <thead>
+                            <tr>
+                            <th style="width:10%;">Employee ID</th>
+                            <th style="width:15%;">First Name</th>
+                            <th style="width:10%;">Last Name</th>
+                            <th style="width:10%;">Username</th>
+                            <th style="width:10%;">Email Address</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in emp_list %}
+                            <tr>
+                            <td><center>{{ item.emp_id }}</center></td>
+                            <td><center>{{ item.firstname }}</center></td>
+                            <td><center>{{ item.lastname }}</center></td>
+                            <td><center>{{ item.username }}</center></td>
+                            <td><center>{{ item.email }}</center></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        </table>
+                        {% endif %}
+                      </table>
+                    </div>
+            </div>
+        </div>
+        </section>
+        <p>/<p>
+            <p>/<p>
+                <p>/<p>
+                    <p>/<p>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    
+    {% endblock %}
+    

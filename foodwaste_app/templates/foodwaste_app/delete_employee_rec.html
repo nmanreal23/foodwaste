@@ -1,0 +1,45 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'adminuser_logout' %}">Admin Logout</a></li>
+                    {% else %}
+                    <li class="#"><a href="{% url 'adminuser_login' %}">Admin Login</a></li>
+                    {% endif %}
+                    <li class="current"><a href="{% url 'empinfo' %}">Delete Employee Record</a></li>
+                    <li><a href="{% url 'empinfo' %}">Employee info</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        
+        <section id="showcase">
+            <div class="container">
+
+                <h1>Delete Employee Record</h1>
+                        <form action="#" method="POST" >
+                            {% csrf_token %}
+                            <table>
+                                {{ user_form.as_table}}
+                            </table><br>
+                            <input type="submit" value="Delete Employee Record">                        
+                        </form>
+                    
+            </div>
+        </section>
+       
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}

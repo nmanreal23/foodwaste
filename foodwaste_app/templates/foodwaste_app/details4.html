@@ -1,0 +1,36 @@
+{% extends 'foodwaste_app/base.html' %}
+
+    {% block content %}
+    {% load static %}
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1> <span class="highlight">Group 5 Project</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'list_Topics' %}">List</a></li>
+                    <li class="current"><a href="{% url 'details_Topics' %}">Details</a></li>
+                    <li><a href="{% url 'datamodel' %}">Data Model</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <h2>Data Recording: Food Wastage Recording Sheet</h2>
+                <link href="{% static 'foodwaste_app/css/style.css' %}" rel="stylesheet">
+                <p><center> <a href="{% static 'foodwaste_app/img/form.pdf' %}" target="_blank"> <img src="{% static 'foodwaste_app/img/sheet.png' %}"> </center></a> 
+                <br><a href="{% static 'foodwaste_app/img/form.pdf' %}" target="_blank">Click here or click the image to download the form.</a></p></p>  
+
+            </div>
+        </section>
+        <footer>
+            <p> Submitted by Group 5 for subject HIT 237 Charles Darwin University, 2023</p>
+        </footer>
+    {% endblock %}
+        
+
+    
