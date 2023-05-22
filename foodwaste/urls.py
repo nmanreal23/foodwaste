@@ -31,4 +31,4 @@ urlpatterns = [
 
 #Update the page title
 admin.site.site_header='Group 5 Administration Page'
-admin.site.site_title='Food Waste Audit Tool16165'
+admin.site.site_title='Food Waste Audit Tool'
